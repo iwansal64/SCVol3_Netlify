@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import background_image from "../assets/background.png";
 import logo_image from "../assets/logo.png";
 import whatsapp_icon from "../assets/whatsapp_icon.png";
+import instagram_icon from "../assets/instagram_icon.png";
 
 const schools_name = "SMK Mitra Industri MM2100";
 const competition_name = "SCVOL3";
@@ -12,7 +13,7 @@ const competition_name = "SCVOL3";
 	<head>
 		<link rel="shortcut icon" href="/logo.ico" type="image/x-icon">
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content={Astro.generator} />
 		<title>SCVOL3</title>
 	</head>
@@ -22,34 +23,24 @@ const competition_name = "SCVOL3";
 		<div class="container">
 			<section class="homepage active">
 				<h1 class="title">{competition_name}</h1>
-				<Image class:list={["logo"]} src={logo_image} alt="logo image" width={400}/>
+				<Image class:list={["logo"]} src={logo_image} alt="logo image" width={300}/>
 				<p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quam.</p>
-				<button class="about">About Us</button>
+				<button class="about">Tentang Lomba</button>
 				<button class="competitions">Cabang Lomba</button>
 				<footer>
-					<div class="contact-information">
-						<a href="https://wa.me/6287718685292?text=Halo+kak,+kami+dari+sekolah+(+)+ingin+menanyakan+SCVOL3">
-							<Image src={whatsapp_icon} alt="whatsapp icon" />
-						</a>
-					</div>
-					<div class="social-media">
-						<a href="#">
-							<Image src={whatsapp_icon} alt="whatsapp icon" />
-						</a>
-						<a href="#">
-							<Image src={whatsapp_icon} alt="whatsapp icon" />
-						</a>
-						<a href="#">
-							<Image src={whatsapp_icon} alt="whatsapp icon" />
-						</a>
-					</div>
+					<a href="https://wa.me/6287718685292?text=Halo+kak,+kami+dari+sekolah+(+)+ingin+menanyakan+SCVOL3">
+						<Image src={whatsapp_icon} alt="whatsapp icon" />
+					</a>
+					<a href="https://www.instagram.com/smansetcompetition?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+						<Image src={instagram_icon} alt="instagram icon" />
+					</a>
 				</footer>
 			</section>
 			<section class="about-us">
-				<h1>✨ SMAN 1 SETU PRESENT ✨</h1>
-
-🔊 𝙃𝙀𝙍𝙀 𝙄𝙎 𝘼 𝙉𝙀𝙒𝙎 𝙁𝙊𝙍.. 💥
-
+				<div class="content-container">
+					<h1 class="title">✨ SMAN 1 SETU PRESENT ✨</h1>
+					<p class="information">🔊 𝙃𝙀𝙍𝙀 𝙄𝙎 𝘼 𝙉𝙀𝙒𝙎 𝙁𝙊𝙍.. 💥
+	
 ‼🪄𝙾𝙿𝙴𝙽 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙾𝚁 𝚂𝙼𝙰𝙽𝚂𝙴𝚃 𝙲𝙾𝙼𝙿𝙴𝚃𝙸𝚃𝙸𝙾𝙽 ‼
 
 📢 𝐒𝐌𝐀𝐍𝐒𝐄𝐓 𝐂𝐎𝐌𝐏𝐄𝐓𝐈𝐓𝐈𝐎𝐍 𝐕𝐎𝐋.𝐈𝐈𝐈 📢
@@ -57,33 +48,87 @@ const competition_name = "SCVOL3";
 👋Halo ꜱᴍᴀɴꜱᴇᴛɪᴢᴇɴ! 👋
 
 🤩Kabar gembira untuk kita semua! 🙌🎉
-
 FINALLY!! Smanset Competition 𝐕𝐎𝐋.𝐈𝐈𝐈 sudah open registrasi loh! 
 So, are you ready to compete, score points, and rock the court?👊🔥
 
- 📌CATAT TANGGAL NYA JANGAN SAMPAI KELEWATAN❗ 
-
-💭 REGISTRASI
-📌22 Agustus - 23 September 2024
-
-😎PREPARE YOUR TEAM FOR:
-
-🏀BASKET SMA/SMK/MA (PUTRA/PUTRI)🏀
-    Biaya pendaftaran : Rp,- +Rp.350.000 + 50.000 (uang wo)
-📲 CP: Nabila (0857-8127-0146)
-              Dimas (0896-0992-5510)
-
-🏐VOLLY SMP, SMA/MA Sederajat (PUTRA)🏐
-    Biaya pendaftaran :Rp,- +Rp.350.000 + 50.000 (uang wo)
-📲 CP: Hilal (0881-0228-98779)
-              Amel (0812-1892-4593)
-
-🏸BADMINTON SMA/SMK/MA Sederajat 🏸
-   Biaya pendaftaran : 
-📲 CP: Tama (0899-6996-732)
-               Pia (0812-1270-9671)
-
-
+📌CATAT TANGGAL NYA JANGAN SAMPAI KELEWATAN❗ 
+					</p>
+					<div class="registration-info">
+						<h6 class="title">💭 REGISTRASI</h6>
+						<p class="info">📌22 Agustus - 23 September 2024</p>
+					</div>
+				</div>
+				<div class="back-container">
+					<button class="back">Back</button>
+				</div>
+			</section>
+			<section class="competition">
+				<h1 class="title">😎PREPARE YOUR TEAM FOR:</h1>
+				<div class="competitions-sect">
+					<div class="section">
+						<div class="content">
+							<h6 class="title">🏀BASKET SMA/SMK/MA (PUTRA/PUTRI)🏀</h6>
+							<p class="info">Biaya pendaftaran : Rp,- +Rp.350.000 + 50.000 (uang wo)</p>
+							<div class="cp">
+								<p>📲CP: </p>
+								<a href="https://wa.me/6285781270146?text=permisi+kak+ingin+tanya+lomba+basket+dong">Nabila (0857-8127-0146)</a>
+								<a href="https://wa.me/6289609925510?text=permisi+kak+ingin+tanya+lomba+basket+dong">Dimas (0896-0992-5510)</a>
+							</div>
+						</div>
+						<a href="https://forms.gle/MCmVKv9u18qLsryo7" class="registration">Register Now!</a>
+					</div>
+					<div class="section">
+						<div class="content">
+							<h6 class="title">🏐VOLLY SMP, SMA/MA Sederajat (PUTRA)🏐</h6>
+							<p class="info">Biaya pendaftaran :Rp,- +Rp.350.000 + 50.000 (uang wo)</p>
+							<div class="cp">
+								<p>📲CP: </p>
+								<a href="https://wa.me/0881022898779?text=permisi+kak+ingin+tanya+lomba+volly+dong">Hilal (0881-0228-98779)</a>
+								<a href="https://wa.me/081218924593?text=permisi+kak+ingin+tanya+lomba+volly+dong">Amel (0812-1892-4593)</a>
+							</div>
+						</div>
+						<a href="https://forms.gle/T6RPemTb3BN3jreB7" class="registration">Register Now!</a>
+					</div>
+					<div class="section">
+						<div class="content">
+							<h6 class="title">🏸BADMINTON SMA/SMK/MA Sederajat 🏸</h6>
+							<p class="info">Biaya pendaftaran :Rp,- +Rp300.000 + 50.000 (uang wo)</p>
+							<div class="cp">
+								<p>📲CP: </p>
+								<a href="https://wa.me/08996996732?text=permisi+kak+ingin+tanya+lomba+badminton+dong">Tama (0899-6996-732)</a>
+								<a href="https://wa.me/081212709671?text=permisi+kak+ingin+tanya+lomba+badminton+dong">Pia (0812-1270-9671)</a>
+							</div>
+						</div>
+						<a href="https://forms.gle/wMutxReS7fHq1s2c6" class="registration">Register Now!</a>
+					</div>
+					<div class="section">
+						<div class="content">
+							<h6 class="title">⚽FUTSAL SMP/MTS Sederajat (PUTRA)⚽</h6>
+							<p class="info">Biaya pendaftaran : Rp,- +Rp. 350.000 + 50.000 (uang wo)</p>
+							<div class="cp">
+								<p>📲CP: </p>
+								<a href="https://wa.me/0895400732728?text=permisi+kak+ingin+tanya+lomba+futsal+dong">Malik (0895-4007-32728)</a>
+								<a href="https://wa.me/089618667721?text=permisi+kak+ingin+tanya+lomba+futsal+dong">Danu (0896-1866-7721)</a>
+							</div>
+						</div>
+						<a href="https://forms.gle/E1L8yMzqJpurSsHw7" class="registration">Register Now!</a>
+					</div>
+					<div class="section">
+						<div class="content">
+							<h6 class="title">🎮 E-SPORT Mobile Legends SMA/Sederajat (PUTRA)🎮</h6>
+							<p class="info">Biaya pendaftaran :Rp,- +Rp.200.000</p>
+							<div class="cp">
+								<p>📲CP: </p>
+								<a href="https://wa.me/0895326069159?text=permisi+kak+ingin+tanya+lomba+esport+dong">Vernando (0895326069159)</a>
+								<a href="https://wa.me/0895366910135?text=permisi+kak+ingin+tanya+lomba+esport+dong">Fares (0895366910135)</a>
+							</div>
+						</div>
+						<a href="#" class="registration">Register Now!</a>
+					</div>
+				</div>
+				<div class="back-container">
+					<button class="back">Back</button>
+				</div>
 			</section>
 		</div>
 	</body>
@@ -98,13 +143,20 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 		color: white;
 	}
 	
+	@media (max-width: 400px) {
+		html {
+			font-size: 12px;
+		}
+	}
+
+
 	body {
 		background-color: #222;
 		overflow: hidden;
 	}
 	
 	.background {
-		width: 100vw;
+		width: 100vmax;
 		height: fit-content;
 		position: absolute;
 		left: 50%;
@@ -123,7 +175,6 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 		height: 90%;
 		display: flex;
 		flex-direction: column;
-		background-color: #00000022;
 		padding: 20px;
 		border-radius: 25px;
 	}
@@ -135,6 +186,9 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 		transform: translateX(-50%) translateY(-50%);
 		width: 100%;
 		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.title {
@@ -145,15 +199,17 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 	.logo {
 		margin-top: 20px;
 		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
+	}
+
+	@media (max-width: 400px) {
+		.logo {
+			width: 150px;
+			height: 150px;
+		}	
 	}
 
 	.quote {
 		margin-top: 20px;
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
 		text-align: center;
 		font-size: 1.75rem;
 		font-style: italic;
@@ -170,13 +226,11 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 		cursor: pointer;
 		transition-duration: 0.25s;
 		width: 90%;
-		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
 	}
 
 	button:hover {
 		background-color: #000000;
+		transform: scale(1.1);
 	}
 
 	footer {
@@ -185,22 +239,12 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 		bottom: 20px;
 		transform: translateX(-50%);
 		width: 90%;
-		display: grid;
-		grid-auto-flow: column;
-	}
-
-	footer div.contact-information {
-		
-	}
-
-	footer div.social-media {
-		justify-self: end0;
 		display: flex;
-		justify-content: end;
-		gap: 10px;
+		gap: 5px;
+		justify-content: center;
 	}
 
-	footer div a {
+	footer a {
 		background-color: #515;
 		width: fit-content;
 		height: fit-content;
@@ -208,13 +252,156 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 		display:flex;
 		justify-content:center;
 		align-items:center;
+		transition-duration: 0.1s;
+	}
+
+	footer a:hover {
+		background-color: #915;
 	}
 
 	section {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 100%;
+		height: 100%;
+		display: none;
 		opacity: 0;
+		pointer-events: none;
 	}
 
 	section.active {
 		opacity: 1;
+		pointer-events: visible;
+		display: unset;
+	}
+
+	section.about-us {
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-auto-flow: row;
+		place-content: center;
+	}
+
+	section.about-us > div.content-container {
+		display: flex;
+		flex-direction: column;
+		background-color: #55115555;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+
+	section.about-us > div.content-container > * {
+		border: 2px solid black;
+		padding: 20px;
+	}
+
+	@media (max-width: 400px) {
+		section.about-us > div.content-container {
+			position: relative;
+			width: 90vw;
+			padding: 10px;
+		}
+
+		section.about-us > div.content-container > * {
+			padding: 5px;
+		}
+	}
+	
+	section.about-us > div.content-container p.information {
+		white-space: pre;
+	}
+
+	section.about-us h6 {
+		font-size: 1.5rem;
+		text-align: left;;
+	}
+	
+	section.competition {
+		display: grid;
+		grid-auto-flow: row;
+		grid-template-rows: auto 1fr auto;
+	}
+
+	section.competition div.competitions-sect {
+		height: 90%;
+		margin-top: 10px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		place-items: center;
+		gap: 40px;
+	}
+
+	@media (max-width: 400px) {
+		section.competition div.competitions-sect {
+			grid-template-columns: 1fr;
+			grid-auto-flow: row;
+			grid-template-rows: unset;
+			grid-auto-rows: auto;
+			overflow: hidden auto;
+			place-items: start;
+		}
+	}
+	
+	section.competition div.competitions-sect div.section {
+		height: 100%;
+		padding: 10px;
+		display: grid;
+		grid-template-rows: 1fr auto;
+	}
+
+	section.competition div.competitions-sect div.section div.content div.cp {
+		display: flex;
+		flex-direction: column;
+	}
+
+	section.competition div.competitions-sect div.section div.content h6.title {
+		font-size: 1.2rem;
+	}
+
+	section.competition h1.title {
+		font-size: 2rem;
+	}
+
+	section.competition div.competitions-sect div.section div.content {
+		background-color: #515;
+		border-radius: 5px;
+		padding: 20px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	section.competition div.competitions-sect a.registration {
+		margin-top: 10px;
+		background-color: #515;
+		width: 100%;
+		padding: 20px;
+		border-radius: 10px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		box-sizing: border-box;
+		text-align: center;
+		text-decoration: none;
+		transition-duration: 0.25s;
+	}
+	
+	section.competition div.competitions-sect a.registration:hover {
+		font-weight: bold;
+		scale: 1.1;
+	}
+
+	div.back-container {
+		width: 100%;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		justify-self: end;
+		display:flex;
+		justify-content:center;
+		align-items:center;
 	}
 </style>
