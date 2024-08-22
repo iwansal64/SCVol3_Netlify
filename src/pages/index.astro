@@ -13,16 +13,16 @@ import instagram_icon from "../assets/instagram_icon.png";
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content={Astro.generator} />
-		<title>SCVOL3</title>
+		<title>SCVOL.3</title>
 	</head>
 	<body>
 		<Image class:list={["background"]} src={background_image} alt="background image" />
 
 		<div class="container">
 			<section class="homepage active">
-				<h1 class="title">SCVOL3</h1>
+				<h1 class="title">SCVOL.3</h1>
 				<Image class:list={["logo"]} src={logo_image} alt="logo image" width={300}/>
-				<p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quam.</p>
+				<p class="quote">Creating A Spirit Of Sportmanship Toward An Intelligent Generation</p>
 				<button class="about">Tentang Lomba</button>
 				<button class="competitions">Cabang Lomba</button>
 				<footer>
@@ -169,7 +169,7 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 	
 	@media (max-width: 400px) {
 		html {
-			font-size: 12px;
+			font-size: 10px;
 		}
 	}
 
@@ -331,6 +331,15 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 
 		section.about-us > div.content-container > * {
 			padding: 5px;
+		}
+
+		section.about-us > div.content-container h1.title {
+			font-size: 6vw;
+		}
+
+		section.about-us > div.content-container p.information {
+			word-wrap: break-word;
+  			white-space: pre-wrap !important;
 		}
 	}
 	
