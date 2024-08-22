@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import background_image from "../assets/background.png";
 import logo_image from "../assets/logo.png";
 
+const schools_name = "SMK Mitra Industri MM2100";
 ---
 
 <html lang="en">
@@ -11,13 +12,25 @@ import logo_image from "../assets/logo.png";
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>SCVOL3</title>
 	</head>
 	<body>
-		<Image class="background" src={background_image} alt="background_image" />
+		<!-- <div class="first-loading">
+			<div>
+				<span></span>
+			</div>
+			<div>
+				<span></span>
+			</div>
+			<div>
+				<span></span>
+			</div>
+		</div> -->
+		<div class="background">
+			<Image src={background_image} alt="background_image" />
+		</div>
 		<nav class="navbar">
 			<div class="logo">
-				<Image src={logo_image} alt="logo_image" width={50} />
 				<h1 class="title">Test</h1>
 			</div>
 			<div class="links">
@@ -28,13 +41,14 @@ import logo_image from "../assets/logo.png";
 			</div>
 		</nav>
 		<section id="home">
-
+			<p class="school_name">✨<b>{schools_name}</b> PRESENT✨</p>
+			<p class="pre">𝙃𝙀𝙍𝙀 𝙄𝙎 𝘼 𝙉𝙀𝙒𝙎 𝙁𝙊𝙍..</p>
+			<p class="main-info">🪄𝙾𝙿𝙴𝙽 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙰𝚃𝙸𝙾𝙽 𝙵𝙾𝚁 𝚂𝙼𝙰𝙽𝚂𝙴𝚃 𝙲𝙾𝙼𝙿𝙴𝚃𝙸𝚃𝙸𝙾𝙽</p>
 		</section>
 		<section id="about">
-
 		</section>
 		<section id="competition">
-
+			<p class="title">𝐒𝐌𝐀𝐍𝐒𝐄𝐓 𝐂𝐎𝐌𝐏𝐄𝐓𝐈𝐓𝐈𝐎𝐍 𝐕𝐎𝐋.𝐈𝐈𝐈 </p>
 		</section>
 		<section id="registration">
 
@@ -44,6 +58,76 @@ import logo_image from "../assets/logo.png";
 </html>
 
 <style>
+	div.first-loading {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		background: #2f9;
+		z-index: 1000;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		flex-direction: column;
+		gap: 10px;
+		animation-name: first_loading_collapse;
+		animation-duration: 5s;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+		transform: translateX(-100%);
+	}
+
+	div.first-loading div {
+		overflow: hidden;
+		width: fit-content;
+		height: fit-content;
+	}
+
+	div.first-loading span {
+		background: #000;
+		width: 200px;
+		height: 20px;
+		display: block;
+		border-radius: 25px;
+		animation-name: first_loading_bar;
+		animation-duration: 1s;
+		animation-iteration-count: 3;
+		animation-timing-function: linear;
+		transform: translateX(-100%);
+	}
+
+	div.first-loading div:nth-child(1) span {
+		animation-delay: 0s;
+	}
+
+	div.first-loading div:nth-child(2) span {
+		animation-delay: 0.25s;
+	}
+
+	div.first-loading div:nth-child(3) span {
+		animation-delay: 0.5s;
+	}
+
+	@keyframes first_loading_bar {
+		0% {
+			transform: translateX(-100%);
+		}
+		100% {
+			transform: translateX(100%);
+		}
+	}
+
+	@keyframes first_loading_collapse {
+		0% {
+			transform: translateY(0);
+		}
+		80% {
+			transform: translateY(0);
+		}
+		100% {
+			transform: translateY(-100%);
+		}
+	}
+	
 	html {
 		scroll-behavior: smooth;
 	}
@@ -61,19 +145,38 @@ import logo_image from "../assets/logo.png";
 	
 	body {
 		overflow-x: hidden;
-		overflow-y: auto;
 		background-color: #333;
+		display: flex;
+		flex-direction: column;
+		animation-name: body_overflow;
+		animation-duration: 5s;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes body_overflow {
+		0% {
+			overflow-y: hidden;
+		}
+		80% {
+			overflow-y: hidden;
+		}
+		100% {
+			overflow-y: auto;
+		}
 	}
 
 	section {
 		width: 100vw;
 		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
 	}
 	
 	.background {
 		width: 100vw;
+		min-width: 500px;
 		height: fit-content;
-		aspect-ratio: 324 / 648;
 		position: absolute;
 		z-index: -100;
 		filter: brightness(25%);
@@ -123,5 +226,27 @@ import logo_image from "../assets/logo.png";
 
 	.navbar > .links > a:hover {
 		background-color: #eeeeee55;
+	}
+
+	section#home {
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+
+	section#home > p.school_name {
+		font-size: 2rem;
+	}
+
+	section#home > p.pre {
+		margin-top: 40px;
+	}
+
+	section#home > p.main-info {
+		font-size: 2rem;
+	}
+
+	section#competition > p.title {
+		font-size: 3rem;
 	}
 </style>
