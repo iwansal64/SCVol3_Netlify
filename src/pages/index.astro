@@ -16,7 +16,7 @@ import instagram_icon from "../assets/instagram_icon.png";
 		<title>SCVOL.3</title>
 	</head>
 	<body>
-		<Image class:list={["background"]} src={background_image} alt="background image" />
+		<div class="background" />
 
 		<div class="container">
 			<section class="homepage active">
@@ -156,6 +156,12 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 				homepage_section.classList.add("active");
 			});
 		});
+		
+		window.scrollTo({
+			left: 0,
+			top: 0,
+			behavior: "smooth"
+		});
 	</script>
 </html>
 
@@ -180,14 +186,17 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 	}
 	
 	.background {
-		width: 100vmax;
-		height: fit-content;
+		width: 100vw;
+		height: 100vh;
 		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translateX(-50%) translateY(-42%);
+		left: 0;
+		top: 0;
 		filter: brightness(35%);
 		z-index: -10;
+		background-image: url(../assets/background.png);
+		background-position: 50% 50%;
+		background-size: 100%;
+		background-repeat: no-repeat;
 	}
 
 	.container {
