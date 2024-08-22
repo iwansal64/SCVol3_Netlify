@@ -1,16 +1,127 @@
 ---
+import { Image } from "astro:assets";
+import background_image from "../assets/background.png";
+import logo_image from "../assets/logo.png";
 
 ---
 
 <html lang="en">
 	<head>
+		<link rel="shortcut icon" href="/logo.ico" type="image/x-icon">
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Image class="background" src={background_image} alt="background_image" />
+		<nav class="navbar">
+			<div class="logo">
+				<Image src={logo_image} alt="logo_image" width={50} />
+				<h1 class="title">Test</h1>
+			</div>
+			<div class="links">
+				<a class:list={["home", "link", "active"]} href="#home">Home</a>
+				<a class:list={["about", "link"]} href="#about">Tentang</a>
+				<a class:list={["competition", "link"]} href="#competition">Lomba</a>
+				<a class:list={["registration", "link"]} href="#registration">Registration</a>
+			</div>
+		</nav>
+		<section id="home">
+
+		</section>
+		<section id="about">
+
+		</section>
+		<section id="competition">
+
+		</section>
+		<section id="registration">
+
+		</section>
 	</body>
+	<script src="./script.js"></script>
 </html>
+
+<style>
+	html {
+		scroll-behavior: smooth;
+	}
+	
+	* {
+		margin:0;
+		padding:0;
+		font-family:calibri;
+		color: white
+	}
+
+	a, button {
+		cursor: pointer;
+	}
+	
+	body {
+		overflow-x: hidden;
+		overflow-y: auto;
+		background-color: #333;
+	}
+
+	section {
+		width: 100vw;
+		min-height: 100vh;
+	}
+	
+	.background {
+		width: 100vw;
+		height: fit-content;
+		aspect-ratio: 324 / 648;
+		position: absolute;
+		z-index: -100;
+		filter: brightness(25%);
+	}
+
+	.navbar {
+		padding: 20px;
+		width: 80vw;
+		border-radius: 0 0 25px 25px;
+		background: #00000099;
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		display: grid;
+		grid-auto-flow: column;
+		gap: 20px;
+	}
+
+	.navbar > .logo {
+		display: flex;
+		align-items: center;
+	}
+
+	.navbar > .logo > .title {
+		margin-left: 10px;
+	}
+	
+	.navbar > .links {
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		justify-self: end;
+		gap: 5px
+	}
+
+	.navbar > .links > a {
+		text-decoration: none;
+		padding: 10px 20px;
+		border-radius: 15px;
+		transition-duration: 0.2s;
+	}
+
+	.navbar > .links > a.active {
+		background-color: #eee;
+		color: black;
+	}
+
+	.navbar > .links > a:hover {
+		background-color: #eeeeee55;
+	}
+</style>
