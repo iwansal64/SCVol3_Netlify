@@ -336,7 +336,6 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 
 
 	section.about-us > div.content-container > * {
-		border: 2px solid black;
 		padding: 20px;
 	}
 
@@ -384,9 +383,12 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 		grid-template-rows: 1fr 1fr;
 		place-items: center;
 		gap: 40px;
-		background-color: #94109499;
+		background-color: #5a115a99;
 		border-radius: 15px;
-		padding: 20px;
+		padding: 15px;
+		position: relative;
+		transform: translateX(-50%);
+		left: 50%;
 	}
 
 	@media (max-width: 1485px) {
@@ -397,11 +399,13 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 			grid-auto-rows: auto;
 			overflow: hidden auto;
 			place-items: center;
+			width: 100%;
 		}
 	}
 	
 	section.competition div.competitions-sect div.section {
 		height: 100%;
+		width: 100%;
 		padding: 10px;
 		display: grid;
 		grid-template-rows: 1fr auto;
@@ -421,7 +425,7 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 	}
 
 	section.competition div.competitions-sect div.section div.content {
-		background-color: #515;
+		background-color: rgb(160, 17, 160);
 		border-radius: 5px;
 		padding: 20px;
 		width: 100%;
@@ -430,7 +434,7 @@ So, are you ready to compete, score points, and rock the court?👊🔥
 
 	section.competition div.competitions-sect a.registration {
 		margin-top: 10px;
-		background-color: #515;
+		background-color: rgb(160, 17, 160);
 		width: 100%;
 		padding: 20px;
 		border-radius: 10px;
